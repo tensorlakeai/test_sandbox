@@ -1,3 +1,3 @@
 # test_sandbox
 
-repo to test Tensorlake Sandbox X OpenCode integration
+repo to test Tensorlake Sandbox's integration with agent frameworks
