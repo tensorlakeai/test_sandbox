@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tensorlake Supply Co.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="bar">
+  <span class="brand">Tensorlake Supply Co.</span>
+  <nav>
+    <a href="#catalog">Catalog</a>
+    <a href="#support">Support</a>
+    <button id="cart" class="cart" type="button" aria-label="Cart">
+      Cart <span id="cart-count" class="count">0</span>
+    </button>
+  </nav>
+</header>
+
+<main id="catalog">
+  <article class="card">
+    <div class="card-glow" aria-hidden="true"></div>
+    <div class="shot" aria-hidden="true">🧰</div>
+    <h1>Field Kit</h1>
+    <p class="blurb">Twelve tools, one roll. Waxed canvas, brass hardware.</p>
+    <p class="price">$68.00</p>
+    <button id="add" class="primary" type="button">Add to cart</button>
+    <button id="details" class="link" type="button">Size &amp; details</button>
+  </article>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog id="sheet">
+  <h2>Size &amp; details</h2>
+  <ul>
+    <li>Rolled: 32 &times; 9 cm</li>
+    <li>Open: 62 &times; 32 cm</li>
+    <li>Weight: 890 g</li>
+  </ul>
+  <button id="close-sheet" class="primary" type="button">Close</button>
+</dialog>
+
+<footer id="support">Questions? support@example.com</footer>
+<script src="app.js"></script>
+</body>
+</html>

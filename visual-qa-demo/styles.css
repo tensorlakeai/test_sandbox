@@ -1,0 +1,144 @@
+:root {
+  --ink: #e8edf7;
+  --muted: #9aa8c4;
+  --ground: #0b1020;
+  --panel: #141b31;
+  --accent: #5b8cff;
+  --line: #26314f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ground);
+  color: var(--ink);
+  font: 16px/1.55 ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--line);
+  background: #0e1428;
+}
+.brand { font-weight: 650; letter-spacing: .2px; }
+.bar nav { display: flex; align-items: center; gap: 18px; }
+.bar a { color: var(--muted); text-decoration: none; }
+.bar a:hover { color: var(--ink); }
+
+.cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+.count {
+  min-width: 24px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #08122e;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 56px 24px;
+}
+
+.card {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  text-align: center;
+}
+.card > * { position: relative; z-index: 2; }
+
+/* Decorative bloom behind the card. */
+.card-glow {
+  position: absolute;
+  inset: -60px;
+  z-index: 3;
+  border-radius: 40px;
+  background: radial-gradient(circle at 50% 12%, rgba(91, 140, 255, .22), transparent 68%);
+}
+
+.shot { font-size: 84px; line-height: 1; margin-bottom: 8px; }
+.card h1 { margin: 0 0 6px; font-size: 28px; }
+.blurb { margin: 0 0 18px; color: var(--muted); }
+.price { margin: 0 0 22px; font-size: 22px; font-weight: 650; }
+
+.primary {
+  width: 100%;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #071026;
+  font: inherit;
+  font-weight: 680;
+  cursor: pointer;
+}
+.primary:hover { background: #7aa2ff; }
+
+.link {
+  margin-top: 14px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  /* Bumped so the details link stays clickable. See issue #41. */
+  z-index: 4;
+}
+.link:hover { color: var(--ink); }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%);
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: #12351f;
+  border: 1px solid #2f7a49;
+  color: #b7f2cd;
+}
+
+dialog {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--ink);
+  padding: 26px 30px;
+  max-width: 340px;
+}
+dialog::backdrop { background: rgba(4, 8, 20, .68); }
+dialog h2 { margin: 0 0 12px; font-size: 20px; }
+dialog ul { margin: 0 0 20px; padding-left: 20px; color: var(--muted); }
+
+footer {
+  padding: 20px 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
