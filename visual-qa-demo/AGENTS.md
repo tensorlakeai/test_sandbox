@@ -25,8 +25,11 @@ the markup and the cart logic are in place.
 
 ## Look at it
 
-This machine has a desktop on display `:1` and Google Chrome. `DISPLAY` is
-already set for you. To open the page yourself:
+This machine has a desktop and Google Chrome, and `DISPLAY` is already set in
+your environment. Use it exactly as it is: do not set `DISPLAY` yourself and
+do not pick a display by listing `/tmp/.X11-unix`. Screenshots are taken of
+the display `DISPLAY` names, so a browser opened on any other one is
+invisible to you.
 
 ```bash
 google-chrome --window-size=1280,760 http://127.0.0.1:4173/ &
