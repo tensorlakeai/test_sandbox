@@ -29,10 +29,10 @@ This machine has a desktop on display `:1` and Google Chrome. `DISPLAY` is
 already set for you. To open the page yourself:
 
 ```bash
-google-chrome --no-sandbox --window-size=1280,760 http://127.0.0.1:4173/ &
+google-chrome --window-size=1280,760 http://127.0.0.1:4173/ &
 ```
 
-`--no-sandbox` is required here; Chrome's own sandbox does not nest.
+Give it a few seconds to paint before you look.
 
 ## House rules
 

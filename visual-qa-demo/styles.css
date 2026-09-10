@@ -81,7 +81,7 @@ main {
   background: radial-gradient(circle at 50% 12%, rgba(91, 140, 255, .22), transparent 68%);
 }
 
-.shot { font-size: 84px; line-height: 1; margin-bottom: 8px; }
+.shot { width: 88px; height: 88px; margin: 0 auto 10px; color: var(--accent); }
 .card h1 { margin: 0 0 6px; font-size: 28px; }
 .blurb { margin: 0 0 18px; color: var(--muted); }
 .price { margin: 0 0 22px; font-size: 22px; font-weight: 650; }
